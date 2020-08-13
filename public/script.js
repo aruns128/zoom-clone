@@ -1,15 +1,16 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {
+  path:'/peerjs',
   host: '/',
-  port: '3001'
+  port: '3000'
 })
 const myVideo = document.createElement('video')
 myVideo.muted = true
 const peers = {}
 navigator.mediaDevices.getUserMedia({
   video: true,
-  audio: true
+  audio: false
 }).then(stream => {
   addVideoStream(myVideo, stream)
 
