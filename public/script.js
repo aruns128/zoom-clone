@@ -90,7 +90,6 @@ const muteUnmute = () => {
 }
 
 const playStop = () => {
-  console.log('object')
   let enabled = myVideoStream.getVideoTracks()[0].enabled;
   if (enabled) {
     myVideoStream.getVideoTracks()[0].enabled = false;
@@ -131,4 +130,8 @@ const setPlayVideo = () => {
     <span>Play Video</span>
   `
   document.querySelector('.main_video_button').innerHTML = html;
+}
+
+const leaveMeeting = () => {
+  console.log("leaveMeeting in development")
 }
